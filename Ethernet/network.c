@@ -68,9 +68,9 @@ void network_init(void)
 	
 	
 	HAL_GPIO_WritePin(W5500_RST_GPIO_Port, W5500_RST_Pin, GPIO_PIN_RESET);
-  delay_ms(100);
+  HAL_Delay(100);
 	HAL_GPIO_WritePin(W5500_RST_GPIO_Port, W5500_RST_Pin, GPIO_PIN_SET);
-  delay_ms(100);
+  HAL_Delay(100);
 
     //reg_dhcp_cbfunc(network_ip_assign, network_ip_update, network_ip_conflict);
 

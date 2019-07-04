@@ -114,8 +114,9 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-	Delay_Init(84);
 	network_init();
+	Delay_Init(84);
+
 
 	MLX90640_SetRefreshRate(MLX_I2C_ADDR, RefreshRate);
 	MLX90640_SetChessMode(MLX_I2C_ADDR);
