@@ -71,8 +71,9 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 struct Upload
 {
-	unsigned short target_temperature[768];
-	unsigned short self_temperature;
+	unsigned long id;
+	float target_temperature;
+	float self_temperature;
 
 };
 /* USER CODE END 0 */
@@ -92,6 +93,7 @@ int main(void)
 	u16 i=0;
 	u32 CheckCode;
 	struct Upload upload;
+	upload.id = DEVICE_ID;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -144,28 +146,17 @@ int main(void)
 		MLX90640_CalculateTo(frame, &mlx90640, emissivity, tr, mlx90640To);
 
 	
-		
+		upload.target_temperature = 0;
 		for(i=0;i<768;i++)//hundredfold,first send low 8bit and then high 8bit,DMA circular transfer
 		{							
-				upload.target_temperature[i] = (unsigned short)(mlx90640To[i]*100);
+				//upload.target_temperature[i] = (unsigned short)(mlx90640To[i]*100);
+				upload.target_temperature += mlx90640To[i];
 		}
-		
-		upload.self_temperature = (unsigned short)(Ta*100);
+		upload.target_temperature = upload.target_temperature / 768;
+		upload.self_temperature = Ta;
 
 
-		sendto(0, (uint8_t *)&upload, sizeof(struct Upload), net_work.desip, DHCP_CLIENT_PORT);
-	
-	
-
-//		uint16_t get_sn = getSn_RX_RSR(0);		
-//		if(get_sn)
-//		{
-//				int16_t len = recvfrom(0, net_work.read_buffer, READ_BUFFER_SIZE, net_work.vsip, net_work.dport);
-//				if(len)
-//				{
-
-//				}
-//		}
+		sendto(0, (uint8_t *)&upload, sizeof(struct Upload), net_work.desip, DHCP_SERVER_PORT);
 		
   }
   /* USER CODE END 3 */

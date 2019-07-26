@@ -3,9 +3,9 @@
 <title>Static Call Graph - [MLX90640\MLX90640.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image MLX90640\MLX90640.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sun Apr 28 14:27:47 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Jul 25 10:49:28 2019
 <BR><P>
-<H3>Maximum Stack Usage =      15916 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =      14444 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; MLX90640_GetFrameData &rArr; MLX90640_I2CWrite &rArr; MLX90640_I2CRead &rArr; I2CReadBytes &rArr; I2CSendNack
 <P>
@@ -692,10 +692,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[72]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetTick))
-<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 </UL>
 
@@ -744,9 +744,9 @@ Global Symbols
 <P><STRONG><a name="[7a]"></a>HAL_RCC_ClockConfig</STRONG> (Thumb, 286 bytes, Stack size 32 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_ClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
@@ -787,8 +787,8 @@ Global Symbols
 <P><STRONG><a name="[81]"></a>HAL_SPI_TransmitReceive</STRONG> (Thumb, 482 bytes, Stack size 40 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_TransmitReceive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_EndRxTxTransaction
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_EndRxTxTransaction
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_spi_writebyte
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_spi_writeburst
@@ -948,13 +948,13 @@ Global Symbols
 <P><STRONG><a name="[8d]"></a>MLX90640_I2CRead</STRONG> (Thumb, 180 bytes, Stack size 1696 bytes, mlx90640_swi2c_driver.o(i.MLX90640_I2CRead))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1748<LI>Call Chain = MLX90640_I2CRead &rArr; I2CReadBytes &rArr; I2CSendNack
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CStop
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CStart
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CSendByte
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CRepeatedStart
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CReadBytes
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_SetRefreshRate
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_SetChessMode
@@ -966,11 +966,11 @@ Global Symbols
 <P><STRONG><a name="[98]"></a>MLX90640_I2CWrite</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, mlx90640_swi2c_driver.o(i.MLX90640_I2CWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1780<LI>Call Chain = MLX90640_I2CWrite &rArr; MLX90640_I2CRead &rArr; I2CReadBytes &rArr; I2CSendNack
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_I2CRead
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wait
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CStop
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CStart
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CSendByte
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_I2CRead
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_SetRefreshRate
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_SetChessMode
@@ -1062,7 +1062,7 @@ Global Symbols
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_sw_reset
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wiz_send_data
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getSn_TX_FSR
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close
 </UL>
 
@@ -1070,7 +1070,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = WIZCHIP_READ_BUF
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_sw_reset
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
 </UL>
 
 <P><STRONG><a name="[af]"></a>WIZCHIP_WRITE</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, w5500.o(i.WIZCHIP_WRITE))
@@ -1079,12 +1079,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendto
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_sw_reset
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wiz_send_data
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_init
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_init
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close
 </UL>
 
-<P><STRONG><a name="[b6]"></a>WIZCHIP_WRITE_BUF</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, w5500.o(i.WIZCHIP_WRITE_BUF))
+<P><STRONG><a name="[b8]"></a>WIZCHIP_WRITE_BUF</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, w5500.o(i.WIZCHIP_WRITE_BUF))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = WIZCHIP_WRITE_BUF
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendto
@@ -1094,7 +1094,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[84]"></a>Wait</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, mlx90640_swi2c_driver.o(i.Wait))
-<BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CStop
+<BR><BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_I2CWrite
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_I2CRead
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CStop
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CStart
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CSendNack
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CSendByte
@@ -1102,8 +1104,6 @@ Global Symbols
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CRepeatedStart
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CReceiveAck
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CReadBytes
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_I2CWrite
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MLX90640_I2CRead
 </UL>
 
 <P><STRONG><a name="[ad]"></a>__ARM_fpclassify</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, fpclassify.o(i.__ARM_fpclassify))
@@ -1220,7 +1220,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
 </UL>
 
 <P><STRONG><a name="[b4]"></a>delay_ms</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, delay.o(i.delay_ms))
@@ -1241,8 +1241,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendto
 </UL>
 
-<P><STRONG><a name="[43]"></a>main</STRONG> (Thumb, 236 bytes, Stack size 14096 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 15916<LI>Call Chain = main &rArr; MLX90640_GetFrameData &rArr; MLX90640_I2CWrite &rArr; MLX90640_I2CRead &rArr; I2CReadBytes &rArr; I2CSendNack
+<P><STRONG><a name="[43]"></a>main</STRONG> (Thumb, 228 bytes, Stack size 12624 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 14444<LI>Call Chain = main &rArr; MLX90640_GetFrameData &rArr; MLX90640_I2CWrite &rArr; MLX90640_I2CRead &rArr; I2CReadBytes &rArr; I2CSendNack
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendto
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;network_init
@@ -1267,9 +1267,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_init
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE_BUF
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_init
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE_BUF
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1279,19 +1279,19 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wiz_send_data
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getSn_TX_FSR
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE_BUF
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE_BUF
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b8]"></a>socket</STRONG> (Thumb, 276 bytes, Stack size 32 bytes, socket.o(i.socket))
+<P><STRONG><a name="[b7]"></a>socket</STRONG> (Thumb, 276 bytes, Stack size 32 bytes, socket.o(i.socket))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = socket &rArr; close &rArr; WIZCHIP_WRITE
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ_BUF
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ_BUF
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;network_init
@@ -1309,7 +1309,7 @@ Global Symbols
 <P><STRONG><a name="[b9]"></a>wiz_send_data</STRONG> (Thumb, 96 bytes, Stack size 32 bytes, w5500.o(i.wiz_send_data))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = wiz_send_data &rArr; WIZCHIP_WRITE_BUF
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE_BUF
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE_BUF
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ
 </UL>
@@ -1332,7 +1332,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> wizchip_conf.o(.data)
 </UL>
-<P><STRONG><a name="[b7]"></a>wizchip_init</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, wizchip_conf.o(i.wizchip_init))
+<P><STRONG><a name="[b6]"></a>wizchip_init</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, wizchip_conf.o(i.wizchip_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = wizchip_init &rArr; wizchip_sw_reset &rArr; WIZCHIP_READ_BUF
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_sw_reset
@@ -1372,12 +1372,12 @@ Global Symbols
 <P><STRONG><a name="[bb]"></a>wizchip_sw_reset</STRONG> (Thumb, 116 bytes, Stack size 40 bytes, wizchip_conf.o(i.wizchip_sw_reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = wizchip_sw_reset &rArr; WIZCHIP_READ_BUF
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE_BUF
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ_BUF
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE_BUF
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_WRITE
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ_BUF
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WIZCHIP_READ
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_init
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wizchip_init
 </UL>
 <P>
 <H3>

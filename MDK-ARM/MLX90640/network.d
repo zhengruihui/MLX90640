@@ -1,7 +1,6 @@
 mlx90640\network.o: ..\Ethernet\network.c
 mlx90640\network.o: ..\Ethernet\network.h
 mlx90640\network.o: C:\APP\Keil\ARM\ARMCC\Bin\..\include\stdint.h
-mlx90640\network.o: ..\Ethernet\dhcp.h
 mlx90640\network.o: ..\Ethernet\w5500.h
 mlx90640\network.o: ..\Ethernet\wizchip_conf.h
 mlx90640\network.o: ..\Ethernet\w5500.h

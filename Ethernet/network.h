@@ -9,9 +9,23 @@
 #define INTERNET_NETWORK_H_
 
 #include "stdint.h"
+#define DEVICE_ID 0
+
+/* UDP port numbers for DHCP */
+#if DEVICE_ID==0
+#define DHCP_CLIENT_PORT      	5500	
+#endif
+#if DEVICE_ID==1
+#define DHCP_CLIENT_PORT      	5501	      
+#endif
+#if DEVICE_ID==2
+#define DHCP_CLIENT_PORT      	5502	      
+#endif
+
+#define DHCP_SERVER_PORT        5507	
 
 #define READ_BUFFER_SIZE            128
-#define WRITE_BUFFER_SIZE           1544
+#define WRITE_BUFFER_SIZE           1024
 
 
 

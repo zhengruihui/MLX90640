@@ -1,7 +1,7 @@
 Dependencies for Project 'MLX90640', Target 'MLX90640': (DO NOT MODIFY !)
 F (startup_stm32f401xc.s)(0x5CC16B37)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F401xC SETA 1"--list startup_stm32f401xc.lst --xref -o mlx90640\startup_stm32f401xc.o --depend mlx90640\startup_stm32f401xc.d)
-F (../Src/main.c)(0x5CC506B5)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\main.o --omf_browse mlx90640\main.crf --depend mlx90640\main.d)
-I (../Inc/main.h)(0x5CC16B33)
+F (../Src/main.c)(0x5D354F81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\main.o --omf_browse mlx90640\main.crf --depend mlx90640\main.d)
+I (../Inc/main.h)(0x5D352F8E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5CC16A6D)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5CC16B32)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5CC16A6D)
@@ -35,14 +35,14 @@ I (../Inc/gpio.h)(0x5CC16B32)
 I (..\MLX90640_Drivers\delay.h)(0x5C1E360E)
 I (../Inc/MyType.h)(0x5C1E360E)
 I (..\MLX90640_Drivers\MLX90640_API.h)(0x5C1E360E)
-I (..\Ethernet\network.h)(0x5CC17C0D)
+I (..\Ethernet\network.h)(0x5D3918B2)
 I (..\Ethernet\w5500.h)(0x5C176A92)
 I (..\Ethernet\wizchip_conf.h)(0x5C176A92)
-I (..\Ethernet\dhcp.h)(0x5CC507C9)
+I (..\Ethernet\dhcp.h)(0x5D352F8E)
 I (..\Ethernet\socket.h)(0x5C176A92)
 F (../Src/gpio.c)(0x5CC16B32)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\gpio.o --omf_browse mlx90640\gpio.crf --depend mlx90640\gpio.d)
 I (../Inc/gpio.h)(0x5CC16B32)
-I (../Inc/main.h)(0x5CC16B33)
+I (../Inc/main.h)(0x5D352F8E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5CC16A6D)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5CC16B32)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5CC16A6D)
@@ -73,7 +73,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5CC16A6D)
 F (../Src/spi.c)(0x5CC16B32)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\spi.o --omf_browse mlx90640\spi.crf --depend mlx90640\spi.d)
 I (../Inc/spi.h)(0x5CC16B32)
-I (../Inc/main.h)(0x5CC16B33)
+I (../Inc/main.h)(0x5D352F8E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5CC16A6D)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5CC16B32)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5CC16A6D)
@@ -103,7 +103,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5CC16A6D)
 F (../Src/stm32f4xx_it.c)(0x5CC16B32)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\stm32f4xx_it.o --omf_browse mlx90640\stm32f4xx_it.crf --depend mlx90640\stm32f4xx_it.d)
-I (../Inc/main.h)(0x5CC16B33)
+I (../Inc/main.h)(0x5D352F8E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5CC16A6D)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5CC16B32)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5CC16A6D)
@@ -134,7 +134,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5CC16A6D)
 I (../Inc/stm32f4xx_it.h)(0x5CC16B32)
 F (../Src/stm32f4xx_hal_msp.c)(0x5CC16B32)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\stm32f4xx_hal_msp.o --omf_browse mlx90640\stm32f4xx_hal_msp.crf --depend mlx90640\stm32f4xx_hal_msp.d)
-I (../Inc/main.h)(0x5CC16B33)
+I (../Inc/main.h)(0x5D352F8E)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5CC16A6D)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5CC16B32)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x5CC16A6D)
@@ -751,12 +751,6 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x5CC16A6D
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5CC16A6D)
-F (..\Ethernet\dhcp.c)(0x5C176A92)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\dhcp.o --omf_browse mlx90640\dhcp.crf --depend mlx90640\dhcp.d)
-I (..\Ethernet\socket.h)(0x5C176A92)
-I (..\Ethernet\wizchip_conf.h)(0x5C176A92)
-I (C:\APP\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Ethernet\w5500.h)(0x5C176A92)
-I (..\Ethernet\dhcp.h)(0x5CC507C9)
 F (..\Ethernet\loopback.c)(0x5C176A92)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\loopback.o --omf_browse mlx90640\loopback.crf --depend mlx90640\loopback.d)
 I (C:\APP\Keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (..\Ethernet\loopback.h)(0x5C176A92)
@@ -764,10 +758,9 @@ I (C:\APP\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Ethernet\socket.h)(0x5C176A92)
 I (..\Ethernet\wizchip_conf.h)(0x5C176A92)
 I (..\Ethernet\w5500.h)(0x5C176A92)
-F (..\Ethernet\network.c)(0x5CC547E2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\network.o --omf_browse mlx90640\network.crf --depend mlx90640\network.d)
-I (..\Ethernet\network.h)(0x5CC17C0D)
+F (..\Ethernet\network.c)(0x5D3533F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\network.o --omf_browse mlx90640\network.crf --depend mlx90640\network.d)
+I (..\Ethernet\network.h)(0x5D3918B2)
 I (C:\APP\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
-I (..\Ethernet\dhcp.h)(0x5CC507C9)
 I (..\Ethernet\w5500.h)(0x5C176A92)
 I (..\Ethernet\wizchip_conf.h)(0x5C176A92)
 I (..\Ethernet\socket.h)(0x5C176A92)
@@ -798,7 +791,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x5CC16A6D
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5CC16A6D)
-I (../Inc/main.h)(0x5CC16B33)
+I (../Inc/main.h)(0x5D352F8E)
 I (..\MLX90640_Drivers\delay.h)(0x5C1E360E)
 I (../Inc/MyType.h)(0x5C1E360E)
 F (..\Ethernet\socket.c)(0x5C176A92)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\socket.o --omf_browse mlx90640\socket.crf --depend mlx90640\socket.d)
@@ -810,7 +803,7 @@ F (..\Ethernet\w5500.c)(0x5C176A92)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g 
 I (..\Ethernet\w5500.h)(0x5C176A92)
 I (C:\APP\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
 I (..\Ethernet\wizchip_conf.h)(0x5C176A92)
-F (..\Ethernet\wizchip_conf.c)(0x5CC25F2B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\wizchip_conf.o --omf_browse mlx90640\wizchip_conf.crf --depend mlx90640\wizchip_conf.d)
+F (..\Ethernet\wizchip_conf.c)(0x5D36B982)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\MLX90640_Drivers -I ..\Ethernet-I.\RTE\_MLX90640-IC:\APP\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\APP\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F401xC -DUSE_HAL_DRIVER -DSTM32F401xC-o mlx90640\wizchip_conf.o --omf_browse mlx90640\wizchip_conf.crf --depend mlx90640\wizchip_conf.d)
 I (C:\APP\Keil\ARM\ARMCC\include\stddef.h)(0x588B8344)
 I (..\Ethernet\wizchip_conf.h)(0x5C176A92)
 I (C:\APP\Keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -842,4 +835,4 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x5CC16A6D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5CC16A6D)
 I (../Inc/spi.h)(0x5CC16B32)
-I (../Inc/main.h)(0x5CC16B33)
+I (../Inc/main.h)(0x5D352F8E)

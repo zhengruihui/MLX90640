@@ -536,11 +536,6 @@
           <GroupName>Ethernet</GroupName>
           <Files>
             <File>
-              <FileName>dhcp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Ethernet\dhcp.c</FilePath>
-            </File>
-            <File>
               <FileName>loopback.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Ethernet\loopback.c</FilePath>

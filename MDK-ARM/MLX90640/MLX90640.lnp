@@ -25,7 +25,6 @@
 "mlx90640\delay.o"
 "mlx90640\mlx90640_api.o"
 "mlx90640\mlx90640_swi2c_driver.o"
-"mlx90640\dhcp.o"
 "mlx90640\loopback.o"
 "mlx90640\network.o"
 "mlx90640\socket.o"
