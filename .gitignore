@@ -110,3 +110,13 @@ Debug/Src/syscalls.d
 Debug/Src/syscalls.o
 Debug/Src/system_stm32f4xx.d
 Debug/Src/system_stm32f4xx.o
+Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d
+Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o
+Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.su
+Debug/objects.mk
+Debug/Src/dma.d
+Debug/Src/dma.o
+Debug/Src/dma.su
+Debug/Src/usart.d
+Debug/Src/usart.o
+Debug/Src/usart.su

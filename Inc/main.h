@@ -71,7 +71,7 @@ void Error_Handler(void);
 #define W5500_RST_Pin GPIO_PIN_14
 #define W5500_RST_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
-
+extern void UART1_IDLEHandler(void);
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
