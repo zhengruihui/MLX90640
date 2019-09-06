@@ -47,7 +47,7 @@
 #define  Rate32HZ  0x06
 
 #define  MLX_I2C_ADDR 0x33
-#define	 RefreshRate Rate4HZ 
+#define	 RefreshRate Rate4HZ
 #define  TA_SHIFT 8 //Default shift for MLX90640 in open air
 /* USER CODE END PD */
 
@@ -59,6 +59,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,9 +72,8 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 struct Upload
 {
-	unsigned long id;
-	float target_temperature;
-	float self_temperature;
+	unsigned short target_temperature[768];
+	unsigned short self_temperature;
 
 };
 /* USER CODE END 0 */
@@ -85,16 +85,15 @@ struct Upload
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	static uint16_t eeMLX90640[832];  
+	static uint16_t eeMLX90640[832];
 	uint16_t frame[834];
 	float Ta,tr;
 	float emissivity=0.95;
 	static float mlx90640To[768];
 	u16 i=0;
-	u32 CheckCode;
 	struct Upload upload;
-	upload.id = DEVICE_ID;
   /* USER CODE END 1 */
+  
 
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -125,7 +124,7 @@ int main(void)
 	paramsMLX90640 mlx90640;
 	MLX90640_DumpEE(MLX_I2C_ADDR, eeMLX90640);
 	MLX90640_ExtractParameters(eeMLX90640, &mlx90640);
-	
+
 	for(i=0;i<3;i++)//Lose the start frame
 	{
 			MLX90640_GetFrameData(MLX_I2C_ADDR, frame);
@@ -145,19 +144,17 @@ int main(void)
 		tr = Ta - TA_SHIFT;
 		MLX90640_CalculateTo(frame, &mlx90640, emissivity, tr, mlx90640To);
 
-	
-		upload.target_temperature = 0;
+
+
 		for(i=0;i<768;i++)//hundredfold,first send low 8bit and then high 8bit,DMA circular transfer
-		{							
-				//upload.target_temperature[i] = (unsigned short)(mlx90640To[i]*100);
-				upload.target_temperature += mlx90640To[i];
+		{
+				upload.target_temperature[i] = (unsigned short)(mlx90640To[i]*100);
 		}
-		upload.target_temperature = upload.target_temperature / 768;
-		upload.self_temperature = Ta;
+
+		upload.self_temperature = (unsigned short)(Ta*100);
 
 
-		sendto(0, (uint8_t *)&upload, sizeof(struct Upload), net_work.desip, DHCP_SERVER_PORT);
-		
+		sendto(0, (uint8_t *)&upload, sizeof(struct Upload), net_work.desip, DHCP_CLIENT_PORT);
   }
   /* USER CODE END 3 */
 }

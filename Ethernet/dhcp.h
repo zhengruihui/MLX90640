@@ -63,8 +63,8 @@ extern "C" {
 
 
 /* UDP port numbers for DHCP */
-#define DHCP_SERVER_PORT      	5507	      ///< DHCP server port number
-#define DHCP_CLIENT_PORT         5500	      ///< DHCP client port number
+#define DHCP_SERVER_PORT      	1617	      ///< DHCP server port number
+#define DHCP_CLIENT_PORT         1618	      ///< DHCP client port number
 
 
 #define MAGIC_COOKIE             0x63825363  ///< You should not modify it number.

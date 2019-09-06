@@ -1,31 +1,22 @@
 /*
  * network.h
  *
- *  Created on: 2018Äê10ÔÂ25ÈÕ
+ *  Created on: 2018ï¿½ï¿½10ï¿½ï¿½25ï¿½ï¿½
  *      Author: zhengruihui
  */
 
-#ifndef INTERNET_NETWORK_H_
-#define INTERNET_NETWORK_H_
+#ifndef __network_H
+#define __network_H
+
+#ifdef __cplusplus
+ extern "C" {
+#endif
+
 
 #include "stdint.h"
-#define DEVICE_ID 0
-
-/* UDP port numbers for DHCP */
-#if DEVICE_ID==0
-#define DHCP_CLIENT_PORT      	5500	
-#endif
-#if DEVICE_ID==1
-#define DHCP_CLIENT_PORT      	5501	      
-#endif
-#if DEVICE_ID==2
-#define DHCP_CLIENT_PORT      	5502	      
-#endif
-
-#define DHCP_SERVER_PORT        5507	
 
 #define READ_BUFFER_SIZE            128
-#define WRITE_BUFFER_SIZE           1024
+#define WRITE_BUFFER_SIZE           1544
 
 
 
@@ -35,7 +26,7 @@ struct network
     unsigned char allocated_sn[4];
     unsigned char allocated_gw[4];
     unsigned char allocated_dns[4];
-	  unsigned char allocated_mac[6];
+    unsigned char allocated_mac[6];
 
     uint8_t network_state;
 
@@ -56,4 +47,10 @@ void network_run(void);
 
 extern struct network net_work;
 
+#ifdef __cplusplus
+}
+#endif
+
+
 #endif /* INTERNET_NETWORK_H_ */
+
